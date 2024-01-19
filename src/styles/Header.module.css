@@ -34,6 +34,7 @@
   padding: 10px;
   display: flex;
   justify-content: space-around;
+  transition: background-color 0.3s ease;
 }
 
 .innerHeader {
@@ -52,7 +53,6 @@
 }
 
 .buttons {
-  /*border: 1px solid red;*/
   width: 40%;
 }
 

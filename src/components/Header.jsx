@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/Header.module.css";
 import svg from "../assets/logo.svg";
 
-const Header = () => {
+const Header = ({ pageHandler }) => {
   return (
     <div className={styles.mainHeader}>
       <div className={styles.innerHeader}>
@@ -12,8 +12,10 @@ const Header = () => {
 
         <div className={styles.buttons}>
           <ul>
-            <li>პარტნიორები</li>
-            <li>ხშირად დასმული კითხვები</li>
+            <li onClick={() => pageHandler("page1")}>პარტნიორები</li>
+            <li onClick={() => pageHandler("page2")}>
+              ხშირად დასმული კითხვები
+            </li>
           </ul>
         </div>
       </div>
