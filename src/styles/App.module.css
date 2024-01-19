@@ -1,0 +1,11 @@
+/*:root {
+  --bg-overlay-color: rgb(22, 22, 22);
+}
+
+.myElement {
+  background-color: var(--bg-overlay-color);
+}*/
+
+.app {
+  color: white;
+}
