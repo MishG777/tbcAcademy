@@ -1,53 +1,51 @@
-.slider {
+.sliderCont {
   position: relative;
-  border: 1px solid green;
-  /*width: 60%;*/
-  margin: 0 auto;
+  height: 100%;
+  margin-top: 50px;
   /*overflow: hidden;*/
-  margin-top: 10rem;
 }
 
-.slidesContainer {
+.slider {
   display: flex;
-  width: 300%; /* Adjust based on the number of slides (e.g., 100% * number of slides) */
-  animation: slideAnimation 2s linear infinite;
-}
-
-@keyframes slideAnimation {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.slide {
-  display: flex;
+  /*margin-left: 720px;*/
   justify-content: center;
   align-items: center;
   width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+
+  /*transition: transform 2s ease-out;*/
 }
 
-.active {
-  opacity: 1;
+.slide {
+  flex: 0 0 100%;
+  margin-left: 20px;
 }
 
-.navigation {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
+.slider img {
+  border-radius: 10px;
+  object-fit: cover;
 }
 
-.navigation img {
-  padding: 10px;
+.leftArrow {
   cursor: pointer;
+  position: absolute;
   width: 40px;
-  border: 2px solid red;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: -45px;
+  opacity: 0.6;
+  z-index: 2;
+}
+.RightArrow {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  transform: translate(0, -50%);
+  top: 50%;
+  right: -45px;
+  opacity: 0.6;
+  z-index: 2;
 }

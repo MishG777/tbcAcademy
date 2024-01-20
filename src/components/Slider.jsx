@@ -5,57 +5,44 @@ import next from "../assets/next.png";
 import prev from "../assets/prev.png";
 
 const Slider = ({ slides }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (slides && slides.length > 0) {
       const interval = setInterval(() => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+        setCurrentIndex((prevSlide) => (prevSlide + 1) % slides.length);
       }, 2000);
       return () => clearInterval(interval);
     }
   }, [slides]);
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
+  const prevHandler = () => {
+    setCurrentIndex(
+      (currentSlide) => (currentSlide - 1 + slides.length) % slides.length
+    );
   };
 
-  if (!slides || slides.length === 0) {
-    return <p>No slides available.</p>;
-  }
+  const nextHandler = () => {
+    setCurrentIndex((currentSlide) => (currentSlide + 1) % slides.length);
+  };
 
   return (
-    <div className={styles.slider}>
-      <div
-        className={`${styles.slidesContainer} ${
-          currentSlide === 0 ? "" : styles.animateSlide
-        }`}
+    <div className={styles.sliderCont}>
+      <div className={styles.slider}>{slides[currentIndex].img}</div>
+
+      {/*<div
+        className={styles.slider}
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`${styles.slide} ${
-              index === currentSlide ? styles.active : ""
-            }`}
-          >
-            {slide}
+          <div key={slide.title} className={styles.slide}>
+            {slide.img}
           </div>
         ))}
-      </div>
-      <div className={styles.navigation}>
-        <img
-          src={prev}
-          alt="prev button"
-          onClick={() =>
-            goToSlide((currentSlide - 1 + slides.length) % slides.length)
-          }
-        />
-        <img
-          src={next}
-          alt="next button"
-          onClick={() => goToSlide((currentSlide + 1) % slides.length)}
-        />
-      </div>
+      </div>*/}
+
+      <img className={styles.leftArrow} src={prev} onClick={prevHandler} />
+      <img className={styles.RightArrow} src={next} onClick={nextHandler} />
     </div>
   );
 };
