@@ -1,21 +1,17 @@
 import React from "react";
-import eye from "../assets/eyes.jpg";
-import rain from "../assets/rain.jpg";
-import ship from "../assets/ship.jpg";
+import animal from "../assets/animal.jpg";
+import biker from "../assets/biker.jpg";
+import planet from "../assets/planet.jpg";
 import styles from "../styles/Partner.module.css";
 
 import Slider from "./Slider";
 
-const Partners = () => {
-  const slides = [
-    { img: <img src={rain} />, title: "rain" },
-    { img: <img src={eye} />, title: "eye" },
-    { img: <img src={ship} />, title: "ship" },
-  ];
+const IMAGES = [planet, animal, biker];
 
+const Partners = () => {
   return (
     <div className={styles.mainSlider}>
-      <Slider slides={slides} />
+      <Slider images={IMAGES} />
     </div>
   );
 };

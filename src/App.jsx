@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Partners from "./components/Partners";
+
 import FreqAskedQuestions from "./components/FreqAskedQuestions";
 
 import styles from "./styles/App.module.css";
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <Header pageHandler={pageHandler} />
+      <Header pageHandler={pageHandler} page={page} />
       {page === "page1" && <Partners />}
       {page === "page2" && <FreqAskedQuestions />}
     </div>
