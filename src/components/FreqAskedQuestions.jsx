@@ -15,9 +15,10 @@ const FreqAskedQuestions = () => {
     <div className={styles.mainCont}>
       <div className={styles.innerCont}>
         <h1>ხშირად დასმული კითხვები</h1>
-        <ul>
+
+        <div className={styles.mainAnswQuest}>
           {questions.map(({ id, question, answer }) => (
-            <div className={styles.answQuestions}>
+            <ul className={styles.answQuestions}>
               <li key={id} onClick={() => toggleAnswer(id)}>
                 <a className={styles.questions}>{question}</a>
                 {id === openQuestionId ? <ChevronUp /> : <ChevronDown />}
@@ -25,9 +26,9 @@ const FreqAskedQuestions = () => {
               {openQuestionId === id && (
                 <h3 className={styles.answers}>{answer}</h3>
               )}
-            </div>
+            </ul>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );

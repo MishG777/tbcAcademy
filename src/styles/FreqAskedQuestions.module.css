@@ -1,3 +1,7 @@
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 .mainCont {
   width: 50%;
   margin: 0 auto;
@@ -9,29 +13,27 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 400px;
 }
 .innerCont h1 {
-  font-weight: bolder;
-  font-size: 25px;
-  padding-top: 45px;
+  padding: 45px 0 45px 0;
   text-align: center;
 }
 
-.innerCont ul {
+.innerCont .mainAnswQuest {
   width: 100%;
   height: 50%;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   letter-spacing: normal;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-.innerCont ul li {
+.innerCont .mainAnswQuest ul li {
   list-style: none;
   font-size: 20px;
+  width: 100%;
   padding-right: 10px;
   display: flex;
   justify-content: space-between;
@@ -41,7 +43,8 @@
 .answQuestions {
   width: 100%;
   margin: 20px 0 20px 0;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding-bottom: 20px;
 }
 
@@ -51,5 +54,7 @@
 }
 
 .questions {
-  font-size: 20px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  transition: height 2s ease-in;
 }

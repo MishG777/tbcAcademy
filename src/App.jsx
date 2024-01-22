@@ -5,6 +5,7 @@ import Partners from "./components/Partners";
 import FreqAskedQuestions from "./components/FreqAskedQuestions";
 
 import styles from "./styles/App.module.css";
+import Footer from "./components/Footer";
 
 function App() {
   const [page, setPage] = useState("page1");
@@ -18,6 +19,8 @@ function App() {
       <Header pageHandler={pageHandler} page={page} />
       {page === "page1" && <Partners />}
       {page === "page2" && <FreqAskedQuestions />}
+
+      <Footer />
     </div>
   );
 }

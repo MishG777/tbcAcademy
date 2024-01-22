@@ -2,7 +2,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font: var(--fnt, var(--font_1));
+  /*font: var(--fnt, var(--font_1));*/
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
 }
 
 :root {

@@ -39,6 +39,7 @@
     var(--bg-scrl, var(--color_11)),
     var(--alpha-bg-scrl, 1)
   );
+  z-index: 10;
   margin-top: var(--wix-ads-height);
   padding: 10px;
   display: flex;
