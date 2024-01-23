@@ -83,3 +83,49 @@
 .buttons ul li.active {
   color: rgb(var(--txts, var(--color_14)));
 }
+.burgerDiv {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .buttons ul li {
+    display: none;
+  }
+
+  .buttons ul {
+    display: flex;
+    /*border: 1px solid red;*/
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .burger {
+    cursor: pointer;
+  }
+  .burgerDiv {
+    display: block;
+    /*border: 1px solid green;*/
+    width: 40px;
+    margin-right: 10px;
+
+    /*width: 50px;*/
+  }
+
+  .movingContainer {
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 400px;
+    background-color: rgb(116, 116, 84);
+  }
+  .x {
+    cursor: pointer;
+  }
+}
+
+/*------------ Moving cont ------------------*/
+/*.movingContainer {
+  display: none;
+}*/
