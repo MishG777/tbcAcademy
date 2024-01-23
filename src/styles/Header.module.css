@@ -41,9 +41,11 @@
   );
   z-index: 10;
   margin-top: var(--wix-ads-height);
-  padding: 10px;
+  /*padding: 10px;*/
+  /*margin: 0 auto;*/
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   transition: background-color 0.3s ease;
 }
 
@@ -62,12 +64,12 @@
 }
 
 .buttons {
-  width: 40%;
+  width: 50%;
 }
 
 .buttons ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
 }
 
@@ -78,23 +80,36 @@
   background-color: transparent;
   outline: none;
   list-style: none;
+  margin-left: 15px;
 }
 
 .buttons ul li.active {
   color: rgb(var(--txts, var(--color_14)));
 }
-.burgerDiv {
+.burgerDiv,
+.closeDiv {
   display: none;
 }
 
 @media (max-width: 950px) {
+  .movingContainer {
+    display: flex;
+    padding-left: 20px;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 300px;
+  }
+
   .buttons ul li {
     display: none;
   }
 
   .buttons ul {
     display: flex;
-    /*border: 1px solid red;*/
     justify-content: flex-end;
     align-items: center;
   }
@@ -102,26 +117,55 @@
     cursor: pointer;
   }
   .burgerDiv {
-    display: block;
-    /*border: 1px solid green;*/
-    width: 40px;
-    margin-right: 10px;
-
-    /*width: 50px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .movingContainer {
-    display: inline;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 400px;
-    background-color: rgb(116, 116, 84);
+  .closeDiv ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 10rem;
+    width: 100%;
   }
+  .closeDiv ul li {
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    font-size: 11px;
+  }
+  .closeDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2.5rem 0 0 1.5rem;
+    height: 17rem;
+  }
+
   .x {
     cursor: pointer;
+    margin-top: 2.5rem 0 0 2.5rem;
+    width: 35px;
+    height: 30px;
+  }
+  .closeDiv ul li.active {
+    color: rgb(var(--txts, var(--color_14)));
+  }
+}
+
+@media (max-width: 450px) {
+  .innerHeader {
+    width: 80%;
+    justify-content: space-between;
+  }
+  .innerHeader a img {
+    width: 130px;
+  }
+  .burgerDiv {
+    width: 30px;
+    margin: 0;
+    padding: 0;
   }
 }
 

@@ -41,7 +41,7 @@ const Header = ({ pageHandler, page }) => {
       </div>
       {toggleMenu && (
         <div className={styles.movingContainer}>
-          <div className={styles.burgerDiv}>
+          <div className={styles.closeDiv}>
             {toggleMenu ? (
               <X className={styles.x} onClick={toggleMenuHandler} />
             ) : (
@@ -50,13 +50,19 @@ const Header = ({ pageHandler, page }) => {
 
             <ul>
               <li
-                onClick={() => pageHandler("page1")}
+                onClick={() => {
+                  pageHandler("page1");
+                  toggleMenuHandler();
+                }}
                 className={page === "page1" ? styles.active : ""}
               >
                 პარტნიორები
               </li>
               <li
-                onClick={() => pageHandler("page2")}
+                onClick={() => {
+                  pageHandler("page2");
+                  toggleMenuHandler();
+                }}
                 className={page === "page2" ? styles.active : ""}
               >
                 ხშირად დასმული კითხვები

@@ -12,19 +12,18 @@
     var(--alpha-bg-scrl, 1)
   );
   margin-top: 4rem;
+  margin-bottom: 0;
 }
 
 .innerFooter {
   display: flex;
   justify-content: space-between;
-  border: 2px solid red;
   height: 100%;
   width: 60%;
   margin: 0 auto;
 }
 
 .tbc {
-  border: 2px solid orange;
   display: flex;
   width: 25rem;
   flex-direction: column;
@@ -42,13 +41,28 @@
 
 .contacts {
   display: flex;
-  justify-content: flex-end;
-  border: 2px solid blue;
+  justify-content: space-evenly;
+  flex-direction: column;
   height: 80%;
   width: 25rem;
+}
+.contacts > * {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 .contacts img {
   width: 39px;
   height: 39px;
   object-fit: cover;
+  margin-left: 8px;
+}
+.contacts button {
+  background-color: rgb(20, 155, 200);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 8px 3rem;
+  font-weight: 300;
 }

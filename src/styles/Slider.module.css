@@ -67,3 +67,31 @@
 .dotButtons > .active {
   background-color: white;
 }
+
+@media (max-width: 950px) {
+  .sliderCont {
+    position: relative;
+    width: 80%;
+    margin: 0 3rem 0 3rem;
+    max-height: 80%;
+    transition: all 1s ease;
+  }
+
+  .imageBtn > * {
+    width: 3.5rem;
+    height: 4rem;
+  }
+
+  .dotButtons {
+    width: 15rem;
+  }
+
+  .dotButtons > * {
+    background: none;
+    border: 2px solid white;
+    border-radius: 4px;
+    width: 15px;
+    height: 7px;
+    transform: scale(1.3);
+  }
+}
