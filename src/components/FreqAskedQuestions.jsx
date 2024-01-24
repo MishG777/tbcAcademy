@@ -10,7 +10,6 @@ const FreqAskedQuestions = () => {
   const toggleAnswer = (questionId) => {
     setOpenQuestionId((prevId) => (prevId === questionId ? null : questionId));
   };
-
   return (
     <div className={styles.mainCont}>
       <div className={styles.innerCont}>
